@@ -1,0 +1,14 @@
+{
+  "name": "http-requests",
+  "version": "1.0.0",
+  "description": "Intro to the HTTP Requestes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashif Sekh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
