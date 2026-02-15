@@ -20,7 +20,7 @@ app.put("/user/ashif", (req, res) => {
 
 app.patch("/user/ashif", (req, res) => {
     res.sendStatus(200).json({ message: "User updated successfully" });
-}
+})
 
 app.delete("/user/ashif", (req, res) => {
     res.sendStatus(200).json({ message: "User deleted successfully" });
