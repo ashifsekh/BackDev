@@ -9,6 +9,16 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# Node/npm caches
+.npm/
+.eslintcache
+.node_repl_history
+*.tgz
+.yarn-integrity
+.pnp
+.pnp.*
+.pnpm-store/
+
 # Env
 .env
 .env.*
@@ -28,3 +38,7 @@ pnpm-debug.log*
 # IDE
 .vscode/
 .idea/
+
+# Misc
+.history/
+*.tmp
