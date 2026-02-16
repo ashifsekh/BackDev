@@ -9,22 +9,21 @@ const port = 3000;
 
 var userIsAuthorised = false;
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 function passwordCheck(req, res, next) {
-  const password = req.body["password"];
-  if (password === "ILoveProgramming") {
-    userIsAuthorised = true;
-  }
+  const password = req.body?.password;
+  userIsAuthorised = password === "ILoveProgramming";
   next();
 }
+
 app.use(passwordCheck);
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-app.post("/check", (req, res) => {
+app.post("/submit", (req, res) => {
   if (userIsAuthorised) {
     res.sendFile(__dirname + "/public/secret.html");
   } else {
