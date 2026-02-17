@@ -53,8 +53,10 @@ h1 {
 }
 .cards {
   display: flex;
+  flex-wrap: wrap;
   margin: 20px 0;
-  width: 100%;
+  width: 110%;
+  align-items: center;
 }
 .card-item {
   width: 100%;
