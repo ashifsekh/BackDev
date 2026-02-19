@@ -77,11 +77,23 @@ app.get("/apiKey", async (req, res) => {
   }
 });
 
-app.get("/bearerToken", (req, res) => {
+app.get("/bearerToken", async(req, res) => {
   //TODO 5: Write your code here to hit up the /secrets/{id} endpoint
   //and get the secret with id of 42
   //HINT: This is how you can use axios to do bearer token auth:
   // https://stackoverflow.com/a/52645402
+    try {
+    const response = await axios.get("https://secrets-api.appbrewery.com/secrets/42", {
+      headers: { 
+        Authorization: `Bearer ${yourBearerToken}` 
+      },
+    });
+    const result = response.data;
+    console.log(result);
+    res.render("index.ejs", { content: JSON.stringify(result) });
+  } catch (error) {
+    res.status(404).send(error.message);
+  }
   /*
   axios.get(URL, {
     headers: { 
