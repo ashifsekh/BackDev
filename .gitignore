@@ -42,3 +42,6 @@ pnpm-debug.log*
 # Misc
 .history/
 *.tmp
+
+# Local secrets
+2. API's/1.3 API Authentication/personal-info.js
