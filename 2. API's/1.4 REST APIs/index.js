@@ -1,6 +1,7 @@
 import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
+import {myBearerToken} from "/Users/ashifsekh/BackDev/2. API's/1.3 API Authentication/personal-info.js";
 
 const app = express();
 const port = 3000;
@@ -12,9 +13,9 @@ const API_URL = "https://secrets-api.appbrewery.com";
 // https://secrets-api.appbrewery.com/
 
 //TODO 1: Add your own bearer token from the previous lesson.
-const yourBearerToken = "";
+const yourBearerToken = myBearerToken;
 const config = {
-  headers: { Authorization: `Bearer ${yourBearerToken}` },
+  headers: { Authorization: `Bearer ${myBearerToken}` },
 };
 
 app.use(bodyParser.urlencoded({ extended: true }));
